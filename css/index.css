@@ -34,10 +34,15 @@ a:hover {
     color: var(--light-grey);
     text-decoration: none;
 }
+.gradient {
+    height: 6px;
+    background: linear-gradient(90deg, rgba(241,241,241,1) 26%, rgba(31,31,32,1) 100%, rgba(28,28,214,1) 100%);
+}
 
-
-#intro {
-    padding-bottom: 10rem;
+.intro {
+    max-width: 1200px;
+    padding: 4rem 1rem 10rem 1rem;
+    margin: 0 auto;
 }
 #intro p {
     font-size: 1rem;
@@ -68,6 +73,18 @@ a:hover {
 .contact a:hover {
     color: var(--black);
 }
+.contact .button {
+    width: fit-content;
+    color: var(--black);
+    background: var(--white);
+    padding: 0.2em 0.5em;
+    text-decoration: none;
+    margin: 0 auto;
+}
+.contact .button:hover {
+    color: var(--white);
+    background-color: var(--dark-grey);
+}
 
 .nav {
     display: flex;
@@ -92,25 +109,20 @@ a:hover {
     color: var(--light-grey);
 }
 .nav .button {
-    background-color: var(--white);
     color: var(--black);
+    background: var(--white);
     padding: 0.2em 0.5em;
 }
-@media (min-width: 850px) {
-    .nav {
-        max-width: 1200px;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 0 auto;
-        padding: 2rem;
-    }
+.nav .button:hover {
+    color: var(--white);
+    background-color: var(--dark-grey);
 }
 
 .footer {
     width: 400px;
     margin: 0 auto;
     text-align: center;
-    padding: .5rem 0;
+    padding: 3rem 0;
 }
 .footer .logo {
     display: flex;
@@ -128,4 +140,14 @@ a:hover {
 .footer p {
     margin: 0;
     font-size: 1rem;
+}
+
+@media (min-width: 850px) {
+    .nav {
+        max-width: 1200px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 1rem 1rem 0 1rem;
+    }
 }
